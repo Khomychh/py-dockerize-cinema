@@ -21,8 +21,6 @@ htmlcov/
 # Інструменти якості коду/IDE
 .idea/
 
-Dockerfile
-docker-compose.yaml
 .dockerignore
 
 
