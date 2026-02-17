@@ -1,5 +1,5 @@
 services:
-  cinema_service:
+  app:
     build:
       context: .
     env_file:
@@ -7,7 +7,6 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./:/app
       - my_media:/files/media
     command: >
       sh -c "python manage.py wait_for_db &&
@@ -19,7 +18,7 @@ services:
 
 
   db:
-    image: postgres:14.21-alpine3.23
+    image: postgres:14-alpine
     restart: always
     env_file:
       - .env

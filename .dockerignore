@@ -1,5 +1,6 @@
 .github
 .gitignore
+.git
 
 .env
 
@@ -27,6 +28,7 @@ docker-compose.yaml
 
 # Статика/медіа (якщо монтуються як volume, не копіювати в образ)
 media/
+files/
 
 # Дані БД/бекупи
 *.sqlite3
