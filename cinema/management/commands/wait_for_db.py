@@ -13,7 +13,7 @@ class Command(BaseCommand):
         db_up = False
         count = 0
         max_tries = 10
-        while db_up is False or t <= max_tries:
+        while db_up is False or count <= max_tries:
             try:
                 with connections["default"].cursor() as cursor:
                     cursor.execute("SELECT 1;")
