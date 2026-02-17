@@ -5,7 +5,7 @@ from django.db import connections, OperationalError
 
 
 class Command(BaseCommand):
-    help = "Wait for database"
+    help = "Wait for database"  # noqa: VNE003
 
     def handle(self, *args, **options):
         self.stdout.write("Waiting for database...")
